@@ -1,16 +1,14 @@
-const mongoose = require("mongoose")
 const Document = require("./Document")
-const URI = process.env.MONGO_URI
-mongoose.connect(URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  useFindAndModify: false,
-  useCreateIndex: true,
-})
+const mongoConnect = require("./mongoConnect")
+const dotenv = require("dotenv");
+dotenv.config();
 
-const io = require("socket.io")(3001, {
+mongoConnect();
+const port = process.env.PORT || 3001
+
+const io = require("socket.io")(port, {
   cors: {
-    origin: "http://localhost:3000",
+    origin: "https://google-docs-gamma.vercel.app",
     methods: ["GET", "POST"],
   },
 })
