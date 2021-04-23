@@ -8,7 +8,7 @@ const port = process.env.PORT || 3001
 
 const io = require("socket.io")(port, {
   cors: {
-    origin: "https://google-docs-gamma.vercel.app",
+    origin: "http://localhost:3000",
     methods: ["GET", "POST"],
   },
 })
