@@ -4,11 +4,13 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon server.js"
   },
   "author": "Bipin (Bunty9)",
   "license": "ISC",
   "dependencies": {
+    "mongoose": "^5.12.5",
+    "nodemon": "^2.0.7",
     "socket.io": "^4.0.1",
     "socket.io-client": "^4.0.1"
   }
