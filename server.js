@@ -1,7 +1,7 @@
 const mongoose = require("mongoose")
 const Document = require("./Document")
-
-mongoose.connect("mongodb://localhost/google-docs-clone", {
+const URI = process.env.MONGO_URI
+mongoose.connect(URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useFindAndModify: false,
