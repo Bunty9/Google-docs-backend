@@ -7,14 +7,13 @@ const dotenv = require("dotenv");
 dotenv.config();
 
 const Document = require("./Document")
-const ENDPOINT = ["https://google-docs-gamma.vercel.app/" , "http://localhost:3000",'https://google-docs-bunty9.vercel.app','https://google-docs-git-master-bunty9.vercel.app' ]
-
+const ENDPOINT = ["https://google-docs-gamma.vercel.app" , "http://localhost:3000",'https://google-docs-bunty9.vercel.app','https://google-docs-git-master-bunty9.vercel.app' ]
 
 const app = express();
 app.use(cors())
 app.use(function (req, res, next) {
 
-  var allowedDomains = ['google-docs-gamma.vercel.app','google-docs-bunty9.vercel.app','https://google-docs-git-master-bunty9.vercel.app/' ];
+  var allowedDomains = ['https://google-docs-gamma.vercel.app','http://localhost:3000','https://google-docs-bunty9.vercel.app','https://google-docs-git-master-bunty9.vercel.app' ];
   var origin = req.headers.origin;
   if(allowedDomains.indexOf(origin) > -1){
     res.setHeader('Access-Control-Allow-Origin', origin);
