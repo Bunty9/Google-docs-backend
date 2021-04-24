@@ -1,7 +1,7 @@
 # Google-docs-backend
 
 ## Github
-You can check out [My GitHub repository](https://github.com/Bunty9) \
+You can check out [My GitHub repository](https://github.com/Bunty9) 
 - your feedback and contributions are welcome!
 
 ## Demo Deployment (Heroku)
@@ -16,4 +16,4 @@ You can check out [My GitHub repository](https://github.com/Bunty9) \
 ### Start
 `npm start` \
 `yarn start` \
-Runs the app in the development mode on port 5000.\
+Runs the app in the development mode on port 5000.
